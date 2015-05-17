@@ -1,0 +1,36 @@
+{
+	"name": "IKEA Raya",
+	"version": "1.0",
+	"manifest_version": 2,
+	"description": "IKEA extension that protects users from food temptation pictures.",
+	"background": {
+		"page": "background.html"
+	},
+	"content_scripts": [
+		{
+			"matches": ["http://*/*", "https://*/*"],
+			"js": ["jquery.min.js", "contentscript_start.js"],
+			"run_at": "document_start"
+		},
+		{
+			"matches": ["http://*/*", "https://*/*"],
+			"js": ["jquery.min.js", "contentscript_end.js"],
+			"run_at": "document_end"
+		}
+	],
+	"options_page": "options.html",
+	"permissions": [
+		"tabs",
+		"contextMenus",
+		"storage",
+		"webRequest",
+		"webRequestBlocking",
+		"http://*/*",
+		"https://*/*"
+	],
+	"icons": {
+		"16": "icon-bitty.png",
+		"48": "icon-small.png",
+		"128": "icon-large.png"
+	}
+}

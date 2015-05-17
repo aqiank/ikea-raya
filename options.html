@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		html, body { height: 100%; color: #003399; }
+		body { background: #003399 }
+		body > div { background: #ffcc00; width: 960px; height: 100%; padding: 30px; margin: 0 auto; }
+	</style>
+</head>
+<body>
+	<div>
+		<h1>IKEA Raya</h1>
+		<h2>Options</h2>
+
+		<p>Keywords <small>(lowercase keywords separated by commas)</small>:</p>
+		<textarea id="keywords" cols="100"></textarea>
+
+		<p>
+			<label>
+				<input type="checkbox" id="useKeywords">
+				Use Keywords
+			</label>
+		</p>
+		<p>
+			<label>
+				<input type="checkbox" id="useBlacklist">
+				Use Server Blacklist
+			</label>
+		</p>
+		<p>
+			<label>
+				<input type="checkbox" id="useRecognition">
+				Use Image Recognition
+			</label>
+		</p>
+
+		<p>
+			<label>Max Recognized Images Per Page</label>
+			<input type="range" min="0" max="10" value="1" id="maxRecognizedImagesPerPage">
+			<span id="maxRecognizedImagesPerPageLabel">1</span>
+		</p>
+
+		<p id="status"></p>
+
+		<button id="save">Save</button>
+		<script src="options.js"></script>
+	</div>
+</body>
+</html>
